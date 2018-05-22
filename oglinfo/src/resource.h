@@ -1,0 +1,33 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by oglinfo.rc
+//
+#define IDS_MODULE_NAME                 101
+#define IDS_SETPIXELFORMAT_FAILED       102
+#define IDS_CREATE_CONTEXT_PROFILE_NOT_SUPPORTED 103
+#define IDS_CONTEXT_PROFILE_MASK_ARB_ERROR 104
+#define IDS_OPENGL_WINDOW_CREATION_ERROR 105
+#define IDS_NO_CREATE_CONTEXT_FUNCTION_POINTER 106
+#define IDS_GETPIXELFORMATATTRIBIV_FAILED 107
+#define IDS_GETPIXELFORMATATTRIBIV_NOT_SUPPORTED 108
+#define IDS_INVALID_MODULE_HANDLE       109
+#define IDS_NO_OPENGL_VERSION_NUMBER_RETRIEVED 110
+#define IDS_CHOOSEPIXELFORMAT_FAILED    111
+#define IDS_NO_CHOOSEPIXELFORMAT_FUNCTION_POINTER 112
+#define IDS_TRUE                        113
+#define IDS_FALSE                       114
+#define IDS_IGNORED                     115
+#define IDS_ERROR                       116
+#define IDS_UNKNOWN_VALUE               117
+#define IDS_OPENGL_CONTEXT_CREATION_FAILED 118
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        102
+#define _APS_NEXT_COMMAND_VALUE         40001
+#define _APS_NEXT_CONTROL_VALUE         1001
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif
