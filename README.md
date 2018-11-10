@@ -44,6 +44,6 @@ Along the way I had to learn / re-learn a bit of MFC. May be I should have used 
 
 
 ##### Notes
-Version of Visual Studio 2017 Professional: 15.7.1<br/>
+Version of Visual Studio 2017 Professional: 15.8.9<br/>
 [The latest Visual C++ redistributables.](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
 
