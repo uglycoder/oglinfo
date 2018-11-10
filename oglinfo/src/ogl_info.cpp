@@ -417,10 +417,16 @@ namespace
 
   /////
 
+  void ClearGLErrors() noexcept
+  {
+    while(::glGetError());
+  }
+  /////
+
   OGL_Info_ns::oglExtensions_t Get_OGL_Extensions() noexcept
   {
     auto const * const glExts_ptr{ (char const *)::glGetString(GL_EXTENSIONS) };
-    while(::glGetError()); // Clear any GL error flags
+    ClearGLErrors();
     std::string const exts{ glExts_ptr ? glExts_ptr : "" };
     OGL_Info_ns::oglExtensions_t oglExts;
     std::string buf;
@@ -448,13 +454,6 @@ namespace
       return std::make_tuple(false, windows_ns::GetString(IDS_GETPIXELFORMATATTRIBIV_FAILED), numberOfPixelFormats);
     }
     return std::make_tuple(false, windows_ns::GetString(IDS_GETPIXELFORMATATTRIBIV_NOT_SUPPORTED), numberOfPixelFormats);
-  }
-
-  /////
-
-  void ClearGLErrors() noexcept
-  {
-    while(::glGetError());
   }
 
   /////
