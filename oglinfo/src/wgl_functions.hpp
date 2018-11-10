@@ -15,18 +15,16 @@ namespace OGL_Info_ns
     static constexpr char const * const str{"wglGetExtensionsStringARB"};
 
     using fn_t = char const * (WINAPI *)(HDC hdc);
-
-    static constexpr wglGetExtensionsStringARB_t wglGetExtensionsStringARB;
   };
+  constexpr wglGetExtensionsStringARB_t g_wglGetExtensionsStringARB;
 
   struct wglCreateContextAttribsARB_t
   {
     static constexpr char const * const str{"wglCreateContextAttribsARB"};
 
     using fn_t = HGLRC(WINAPI *) (HDC hDC, HGLRC hShareContext, const int *attribList);
-
-    static constexpr wglCreateContextAttribsARB_t wglCreateContextAttribsARB;
   };
+  constexpr wglCreateContextAttribsARB_t g_wglCreateContextAttribsARB;
 
 
   struct wglGetPixelFormatAttribivARB_t
@@ -34,9 +32,8 @@ namespace OGL_Info_ns
     static constexpr char const * const str{"wglGetPixelFormatAttribivARB"};
 
     using fn_t = BOOL(WINAPI *) (HDC hdc, int iPixelFormat, int iLayerPlane, unsigned int nAttributes, const int *piAttributes, int *piValues);
-
-    static constexpr wglGetPixelFormatAttribivARB_t wglGetPixelFormatAttribivARB;
   };
+  constexpr wglGetPixelFormatAttribivARB_t g_wglGetPixelFormatAttribivARB;
 
 
   struct wglChoosePixelFormatARB_t
@@ -44,9 +41,8 @@ namespace OGL_Info_ns
     static constexpr char const * const str{"wglChoosePixelFormatARB"};
 
     using fn_t = BOOL(WINAPI *) (HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, unsigned int nMaxFormats, int *piFormats, unsigned int *nNumFormats);
-
-    static constexpr wglChoosePixelFormatARB_t wglChoosePixelFormatARB;
   };
+  constexpr wglChoosePixelFormatARB_t g_wglChoosePixelFormatARB;
 
 
   template <typename FN>

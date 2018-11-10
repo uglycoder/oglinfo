@@ -336,7 +336,7 @@ namespace
 
   OGL_Info_ns::wglExtensions_t Get_WGL_Extensions(::HDC hdc) noexcept
   {
-    auto const wglGetExtensionsStringARBProc{ GetWGLProc(OGL_Info_ns::wglGetExtensionsStringARB_t::wglGetExtensionsStringARB) };
+    auto const wglGetExtensionsStringARBProc{ GetWGLProc(OGL_Info_ns::g_wglGetExtensionsStringARB) };
 
     OGL_Info_ns::wglExtensions_t wglExtensions;
     std::string const strings{ wglGetExtensionsStringARBProc ? wglGetExtensionsStringARBProc(hdc) : "" };
@@ -371,7 +371,7 @@ namespace
   {
     if(auto tmpOGLcontext{ CreateTemporaryOGL_Window().ctxt_ptr }; tmpOGLcontext)
     {
-      if(auto const wglCreateContextAttribsARBProc{ GetWGLProc(OGL_Info_ns::wglCreateContextAttribsARB_t::wglCreateContextAttribsARB) }; wglCreateContextAttribsARBProc)
+      if(auto const wglCreateContextAttribsARBProc{ GetWGLProc(OGL_Info_ns::g_wglCreateContextAttribsARB) }; wglCreateContextAttribsARBProc)
       {
         tmpOGLcontext->deleteContext();
 
@@ -436,7 +436,7 @@ namespace
 
   std::tuple<bool, std::string, int> GetNumberOfPixelFormats(HDC hdc)
   {
-    auto const wglGetPixelFormatAttribivARBProc{ GetWGLProc(OGL_Info_ns::wglGetPixelFormatAttribivARB_t::wglGetPixelFormatAttribivARB) };
+    auto const wglGetPixelFormatAttribivARBProc{ GetWGLProc(OGL_Info_ns::g_wglGetPixelFormatAttribivARB) };
     int numberOfPixelFormats{};
     if(wglGetPixelFormatAttribivARBProc != nullptr)
     {
@@ -558,7 +558,7 @@ namespace
     // (HDC hdc, const int *piAttribIList, const FLOAT *pfAttribFList, unsigned int nMaxFormats, int *piFormats, unsigned int *nNumFormats)
     std::vector<int> formats(nMaxFormats);
     unsigned int numFormatsWritten{ 0 };
-    if(auto const wglChoosePixelFormatARB{ GetWGLProc(OGL_Info_ns::wglChoosePixelFormatARB_t::wglChoosePixelFormatARB) }; wglChoosePixelFormatARB != nullptr)
+    if(auto const wglChoosePixelFormatARB{ GetWGLProc(OGL_Info_ns::g_wglChoosePixelFormatARB) }; wglChoosePixelFormatARB != nullptr)
     {
       if(wglChoosePixelFormatARB(glcxt->hdc, attribIList.data(), nullptr, nMaxFormats, formats.data(), &numFormatsWritten) == TRUE)
       {
@@ -592,7 +592,7 @@ namespace
     std::vector<int> attributes(attribsRequested.size());
     std::transform(std::cbegin(attribsRequested), std::cend(attribsRequested), std::begin(attributes), [](auto const & e) { return static_cast<int>(e); });
 
-    if(auto const wglGetPixelFormatAttribivARB_FN{ GetWGLProc(OGL_Info_ns::wglGetPixelFormatAttribivARB_t::wglGetPixelFormatAttribivARB) }; wglGetPixelFormatAttribivARB_FN)
+    if(auto const wglGetPixelFormatAttribivARB_FN{ GetWGLProc(OGL_Info_ns::g_wglGetPixelFormatAttribivARB) }; wglGetPixelFormatAttribivARB_FN)
     {
       std::vector<int> results_buffer(attributes.size());
       if(wglGetPixelFormatAttribivARB_FN(glcxt->hdc, pixelFormat, iLayerPlane, static_cast<unsigned int>(attributes.size()), attributes.data(), results_buffer.data()) == TRUE)
