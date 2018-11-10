@@ -344,7 +344,7 @@ namespace
     std::string buf;
     while(ss >> buf)
     {
-      wglExtensions.emplace_back(std::move(buf));
+      wglExtensions.push_back(std::move(buf));
     }
     return wglExtensions;
   }
@@ -358,10 +358,10 @@ namespace
     list.reserve(att_list.size() + 2);
     for(auto const[name, value] : att_list)
     {
-      list.emplace_back(static_cast<int>(name));
-      list.emplace_back(value);
+      list.push_back(static_cast<int>(name));
+      list.push_back(value);
     }
-    list.emplace_back(0);
+    list.push_back(0);
     return list;
   }
 
@@ -427,7 +427,7 @@ namespace
     std::istringstream is{ exts };
     while(is >> buf)
     {
-      oglExts.emplace_back(std::move(buf));
+      oglExts.push_back(std::move(buf));
     }
     return oglExts;
   }
