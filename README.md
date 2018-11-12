@@ -28,7 +28,7 @@ Note: this project is not documented.
 
 Examples of screenshots for this tool are located in the _screenshots_ directory.
 One such example:
-![Alt text](/oglinfo/screenshots/opengldriverpage.png?raw=true "Driver Info")
+[ "Driver Info"](/oglinfo/screenshots/opengldriverpage.png?raw=true)
 
 #### Purpose
 The main reason for writing this project has been to learn OpenGL context creation for Windows
