@@ -80,47 +80,47 @@ namespace OGL_Info_ns
 
   // Convenient pixel attribute pairs
   
-  constexpr auto DRAW_TO_WINDOW(bool b)       { return std::make_pair(WGL_ATTRIBS::DRAW_TO_WINDOW_ARB, b); }
-  constexpr auto DRAW_TO_BITMAP(bool b)       { return std::make_pair(WGL_ATTRIBS::DRAW_TO_BITMAP_ARB, b); }
-  constexpr auto NEED_PALETTE(bool b)         { return std::make_pair(WGL_ATTRIBS::NEED_PALETTE_ARB, b); }
-  constexpr auto NEED_SYSTEM_PALETTE(bool b)  { return std::make_pair(WGL_ATTRIBS::NEED_SYSTEM_PALETTE_ARB, b); }
-  constexpr auto SWAP_LAYER_BUFFERS(bool b)   { return std::make_pair(WGL_ATTRIBS::SWAP_LAYER_BUFFERS_ARB, b); }
-  constexpr auto SHARE_DEPTH(bool b)          { return std::make_pair(WGL_ATTRIBS::SHARE_DEPTH_ARB, b); }
-  constexpr auto SHARE_STENCIL(bool b)        { return std::make_pair(WGL_ATTRIBS::SHARE_STENCIL_ARB, b); }
-  constexpr auto SHARE_ACCUM(bool b)          { return std::make_pair(WGL_ATTRIBS::SHARE_ACCUM_ARB, b); }
-  constexpr auto SUPPORT_GDI(bool b)          { return std::make_pair(WGL_ATTRIBS::SUPPORT_GDI_ARB, b); }
-  constexpr auto SUPPORT_OPENGL(bool b)       { return std::make_pair(WGL_ATTRIBS::SUPPORT_OPENGL_ARB, b); }
-  constexpr auto DOUBLE_BUFFER(bool b)        { return std::make_pair(WGL_ATTRIBS::DOUBLE_BUFFER_ARB, b); }
-  constexpr auto STEREO(bool b)               { return std::make_pair(WGL_ATTRIBS::STEREO_ARB, b); }
+  constexpr auto DRAW_TO_WINDOW(bool b)       { return std::pair{WGL_ATTRIBS::DRAW_TO_WINDOW_ARB, b}; }
+  constexpr auto DRAW_TO_BITMAP(bool b)       { return std::pair{WGL_ATTRIBS::DRAW_TO_BITMAP_ARB, b}; }
+  constexpr auto NEED_PALETTE(bool b)         { return std::pair{WGL_ATTRIBS::NEED_PALETTE_ARB, b}; }
+  constexpr auto NEED_SYSTEM_PALETTE(bool b)  { return std::pair{WGL_ATTRIBS::NEED_SYSTEM_PALETTE_ARB, b}; }
+  constexpr auto SWAP_LAYER_BUFFERS(bool b)   { return std::pair{WGL_ATTRIBS::SWAP_LAYER_BUFFERS_ARB, b}; }
+  constexpr auto SHARE_DEPTH(bool b)          { return std::pair{WGL_ATTRIBS::SHARE_DEPTH_ARB, b}; }
+  constexpr auto SHARE_STENCIL(bool b)        { return std::pair{WGL_ATTRIBS::SHARE_STENCIL_ARB, b}; }
+  constexpr auto SHARE_ACCUM(bool b)          { return std::pair{WGL_ATTRIBS::SHARE_ACCUM_ARB, b}; }
+  constexpr auto SUPPORT_GDI(bool b)          { return std::pair{WGL_ATTRIBS::SUPPORT_GDI_ARB, b}; }
+  constexpr auto SUPPORT_OPENGL(bool b)       { return std::pair{WGL_ATTRIBS::SUPPORT_OPENGL_ARB, b}; }
+  constexpr auto DOUBLE_BUFFER(bool b)        { return std::pair{WGL_ATTRIBS::DOUBLE_BUFFER_ARB, b}; }
+  constexpr auto STEREO(bool b)               { return std::pair{WGL_ATTRIBS::STEREO_ARB, b}; }
 
-  constexpr auto NUMBER_OVERLAYS(int i)   { return std::make_pair(WGL_ATTRIBS::NUMBER_OVERLAYS_ARB, i); }
-  constexpr auto NUMBER_UNDERLAYS(int i)  { return std::make_pair(WGL_ATTRIBS::NUMBER_UNDERLAYS_ARB, i); }
-  constexpr auto COLOR_BITS(int i)        { return std::make_pair(WGL_ATTRIBS::COLOR_BITS_ARB, i); }
-  constexpr auto RED_BITS(int i)          { return std::make_pair(WGL_ATTRIBS::RED_BITS_ARB, i); }
-  constexpr auto GREEN_BITS(int i)        { return std::make_pair(WGL_ATTRIBS::GREEN_BITS_ARB, i); }
-  constexpr auto BLUE_BITS(int i)         { return std::make_pair(WGL_ATTRIBS::BLUE_BITS_ARB, i); }
-  constexpr auto ALPHA_BITS(int i)        { return std::make_pair(WGL_ATTRIBS::ALPHA_BITS_ARB, i); }
-  constexpr auto ACCUM_BITS(int i)        { return std::make_pair(WGL_ATTRIBS::ACCUM_BITS_ARB, i); }
-  constexpr auto ACCUM_RED_BITS(int i)    { return std::make_pair(WGL_ATTRIBS::ACCUM_RED_BITS_ARB, i); }
-  constexpr auto ACCUM_GREEN_BITS(int i)  { return std::make_pair(WGL_ATTRIBS::ACCUM_GREEN_BITS_ARB, i); }
-  constexpr auto ACCUM_BLUE_BITS(int i)   { return std::make_pair(WGL_ATTRIBS::ACCUM_BLUE_BITS_ARB, i); }
-  constexpr auto ACCUM_ALPHA_BITS(int i)  { return std::make_pair(WGL_ATTRIBS::ACCUM_ALPHA_BITS_ARB, i); }
-  constexpr auto DEPTH_BITS(int i)        { return std::make_pair(WGL_ATTRIBS::DEPTH_BITS_ARB, i); }
-  constexpr auto STENCIL_BITS(int i)      { return std::make_pair(WGL_ATTRIBS::STENCIL_BITS_ARB, i); }
-  constexpr auto AUX_BUFFERS(int i)       { return std::make_pair(WGL_ATTRIBS::AUX_BUFFERS_ARB, i); }
-  constexpr auto SAMPLE_BUFFERS(int i)    { return std::make_pair(WGL_ATTRIBS::SAMPLE_BUFFERS_ARB, i); }
-  constexpr auto SAMPLES(int i)           { return std::make_pair(WGL_ATTRIBS::SAMPLES_ARB, i); }
+  constexpr auto NUMBER_OVERLAYS(int i)   { return std::pair{WGL_ATTRIBS::NUMBER_OVERLAYS_ARB, i}; }
+  constexpr auto NUMBER_UNDERLAYS(int i)  { return std::pair{WGL_ATTRIBS::NUMBER_UNDERLAYS_ARB, i}; }
+  constexpr auto COLOR_BITS(int i)        { return std::pair{WGL_ATTRIBS::COLOR_BITS_ARB, i}; }
+  constexpr auto RED_BITS(int i)          { return std::pair{WGL_ATTRIBS::RED_BITS_ARB, i}; }
+  constexpr auto GREEN_BITS(int i)        { return std::pair{WGL_ATTRIBS::GREEN_BITS_ARB, i}; }
+  constexpr auto BLUE_BITS(int i)         { return std::pair{WGL_ATTRIBS::BLUE_BITS_ARB, i}; }
+  constexpr auto ALPHA_BITS(int i)        { return std::pair{WGL_ATTRIBS::ALPHA_BITS_ARB, i}; }
+  constexpr auto ACCUM_BITS(int i)        { return std::pair{WGL_ATTRIBS::ACCUM_BITS_ARB, i}; }
+  constexpr auto ACCUM_RED_BITS(int i)    { return std::pair{WGL_ATTRIBS::ACCUM_RED_BITS_ARB, i}; }
+  constexpr auto ACCUM_GREEN_BITS(int i)  { return std::pair{WGL_ATTRIBS::ACCUM_GREEN_BITS_ARB, i}; }
+  constexpr auto ACCUM_BLUE_BITS(int i)   { return std::pair{WGL_ATTRIBS::ACCUM_BLUE_BITS_ARB, i}; }
+  constexpr auto ACCUM_ALPHA_BITS(int i)  { return std::pair{WGL_ATTRIBS::ACCUM_ALPHA_BITS_ARB, i}; }
+  constexpr auto DEPTH_BITS(int i)        { return std::pair{WGL_ATTRIBS::DEPTH_BITS_ARB, i}; }
+  constexpr auto STENCIL_BITS(int i)      { return std::pair{WGL_ATTRIBS::STENCIL_BITS_ARB, i}; }
+  constexpr auto AUX_BUFFERS(int i)       { return std::pair{WGL_ATTRIBS::AUX_BUFFERS_ARB, i}; }
+  constexpr auto SAMPLE_BUFFERS(int i)    { return std::pair{WGL_ATTRIBS::SAMPLE_BUFFERS_ARB, i}; }
+  constexpr auto SAMPLES(int i)           { return std::pair{WGL_ATTRIBS::SAMPLES_ARB, i}; }
 
-  constexpr auto NO_ACCELERATION      {std::make_pair(WGL_ATTRIBS::ACCELERATION_ARB, (int)WGL_ATTRIBS::NO_ACCELERATION_ARB)};
-  constexpr auto GENERIC_ACCELERATION {std::make_pair(WGL_ATTRIBS::ACCELERATION_ARB, (int)WGL_ATTRIBS::GENERIC_ACCELERATION_ARB)};
-  constexpr auto FULL_ACCELERATION    {std::make_pair(WGL_ATTRIBS::ACCELERATION_ARB, (int)WGL_ATTRIBS::FULL_ACCELERATION_ARB)};
+  constexpr auto NO_ACCELERATION      {std::pair{WGL_ATTRIBS::ACCELERATION_ARB, (int)WGL_ATTRIBS::NO_ACCELERATION_ARB}};
+  constexpr auto GENERIC_ACCELERATION {std::pair{WGL_ATTRIBS::ACCELERATION_ARB, (int)WGL_ATTRIBS::GENERIC_ACCELERATION_ARB}};
+  constexpr auto FULL_ACCELERATION    {std::pair{WGL_ATTRIBS::ACCELERATION_ARB, (int)WGL_ATTRIBS::FULL_ACCELERATION_ARB}};
 
-  constexpr auto SWAP_EXCHANGE  { std::make_pair(WGL_ATTRIBS::SWAP_METHOD_ARB, (int)WGL_ATTRIBS::SWAP_EXCHANGE_ARB) };
-  constexpr auto SWAP_COPY      { std::make_pair(WGL_ATTRIBS::SWAP_METHOD_ARB, (int)WGL_ATTRIBS::SWAP_COPY_ARB) };
-  constexpr auto SWAP_UNDEFINED { std::make_pair(WGL_ATTRIBS::SWAP_METHOD_ARB, (int)WGL_ATTRIBS::SWAP_UNDEFINED_ARB) };
+  constexpr auto SWAP_EXCHANGE  {std::pair{WGL_ATTRIBS::SWAP_METHOD_ARB, (int)WGL_ATTRIBS::SWAP_EXCHANGE_ARB}};
+  constexpr auto SWAP_COPY      {std::pair{WGL_ATTRIBS::SWAP_METHOD_ARB, (int)WGL_ATTRIBS::SWAP_COPY_ARB}};
+  constexpr auto SWAP_UNDEFINED {std::pair{WGL_ATTRIBS::SWAP_METHOD_ARB, (int)WGL_ATTRIBS::SWAP_UNDEFINED_ARB}};
 
-  constexpr auto TYPE_RGBA        { std::make_pair(WGL_ATTRIBS::PIXEL_TYPE_ARB, (int)WGL_ATTRIBS::TYPE_RGBA_ARB) };
-  constexpr auto TYPE_COLORINDEX  { std::make_pair(WGL_ATTRIBS::PIXEL_TYPE_ARB, (int)WGL_ATTRIBS::TYPE_COLORINDEX_ARB) };
+  constexpr auto TYPE_RGBA        {std::pair{WGL_ATTRIBS::PIXEL_TYPE_ARB, (int)WGL_ATTRIBS::TYPE_RGBA_ARB}};
+  constexpr auto TYPE_COLORINDEX  {std::pair{WGL_ATTRIBS::PIXEL_TYPE_ARB, (int)WGL_ATTRIBS::TYPE_COLORINDEX_ARB}};
 
 
   // Context
@@ -135,20 +135,20 @@ namespace OGL_Info_ns
   };
 
   // MAJOR_VERSION_ARB, MINOR_VERSION_ARB
-  constexpr auto OGL_MAJOR_VERSION_5  { std::make_pair(WGL_CONTEXT_NAMES::MAJOR_VERSION_ARB, 5) };
-  constexpr auto OGL_MAJOR_VERSION_4  { std::make_pair(WGL_CONTEXT_NAMES::MAJOR_VERSION_ARB, 4) };
-  constexpr auto OGL_MAJOR_VERSION_3  { std::make_pair(WGL_CONTEXT_NAMES::MAJOR_VERSION_ARB, 3) };
-  constexpr auto OGL_MAJOR_VERSION_2  { std::make_pair(WGL_CONTEXT_NAMES::MAJOR_VERSION_ARB, 2) };
-  constexpr auto OGL_MAJOR_VERSION_1  { std::make_pair(WGL_CONTEXT_NAMES::MAJOR_VERSION_ARB, 1) };
+  constexpr auto OGL_MAJOR_VERSION_5  { std::pair{WGL_CONTEXT_NAMES::MAJOR_VERSION_ARB, 5} };
+  constexpr auto OGL_MAJOR_VERSION_4  { std::pair{WGL_CONTEXT_NAMES::MAJOR_VERSION_ARB, 4} };
+  constexpr auto OGL_MAJOR_VERSION_3  { std::pair{WGL_CONTEXT_NAMES::MAJOR_VERSION_ARB, 3} };
+  constexpr auto OGL_MAJOR_VERSION_2  { std::pair{WGL_CONTEXT_NAMES::MAJOR_VERSION_ARB, 2} };
+  constexpr auto OGL_MAJOR_VERSION_1  { std::pair{WGL_CONTEXT_NAMES::MAJOR_VERSION_ARB, 1} };
 
-  constexpr auto OGL_MINOR_VERSION_7  { std::make_pair(WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 7) };
-  constexpr auto OGL_MINOR_VERSION_6  { std::make_pair(WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 6) };
-  constexpr auto OGL_MINOR_VERSION_5  { std::make_pair(WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 5) };
-  constexpr auto OGL_MINOR_VERSION_4  { std::make_pair(WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 4) };
-  constexpr auto OGL_MINOR_VERSION_3  { std::make_pair(WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 3) };
-  constexpr auto OGL_MINOR_VERSION_2  { std::make_pair(WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 2) };
-  constexpr auto OGL_MINOR_VERSION_1  { std::make_pair(WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 1) };
-  constexpr auto OGL_MINOR_VERSION_0  { std::make_pair(WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 0) };
+  constexpr auto OGL_MINOR_VERSION_7  { std::pair{WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 7} };
+  constexpr auto OGL_MINOR_VERSION_6  { std::pair{WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 6} };
+  constexpr auto OGL_MINOR_VERSION_5  { std::pair{WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 5} };
+  constexpr auto OGL_MINOR_VERSION_4  { std::pair{WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 4} };
+  constexpr auto OGL_MINOR_VERSION_3  { std::pair{WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 3} };
+  constexpr auto OGL_MINOR_VERSION_2  { std::pair{WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 2} };
+  constexpr auto OGL_MINOR_VERSION_1  { std::pair{WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 1} };
+  constexpr auto OGL_MINOR_VERSION_0  { std::pair{WGL_CONTEXT_NAMES::MINOR_VERSION_ARB, 0} };
 
   
 
@@ -156,15 +156,15 @@ namespace OGL_Info_ns
   constexpr int WGL_CONTEXT_DEBUG_BIT_ARB               { 0x0001 };
   constexpr int WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB  { 0x0002 };
 
-  constexpr auto OGL_DEBUG_CONTEXT              { std::make_pair(WGL_CONTEXT_NAMES::FLAGS_ARB, WGL_CONTEXT_DEBUG_BIT_ARB) };
-  constexpr auto OGL_FORWARD_COMPATIBLE_CONTEXT { std::make_pair(WGL_CONTEXT_NAMES::FLAGS_ARB, WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB) };
-  constexpr auto OGL_DEBUG_FORWARD_CONTEXT      { std::make_pair(WGL_CONTEXT_NAMES::FLAGS_ARB, WGL_CONTEXT_DEBUG_BIT_ARB | WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB) };
+  constexpr auto OGL_DEBUG_CONTEXT              { std::pair{WGL_CONTEXT_NAMES::FLAGS_ARB, WGL_CONTEXT_DEBUG_BIT_ARB} };
+  constexpr auto OGL_FORWARD_COMPATIBLE_CONTEXT { std::pair{WGL_CONTEXT_NAMES::FLAGS_ARB, WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB} };
+  constexpr auto OGL_DEBUG_FORWARD_CONTEXT      { std::pair{WGL_CONTEXT_NAMES::FLAGS_ARB, WGL_CONTEXT_DEBUG_BIT_ARB | WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB} };
   
   // PROFILE_MASK_ARB
   constexpr int WGL_CONTEXT_CORE_PROFILE_BIT_ARB          { 0x00000001 }; // Specified as default value
   constexpr int WGL_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB { 0x00000002 };
 
-  constexpr auto OGL_CORE_PROFILE_CONTEXT   { std::make_pair(WGL_CONTEXT_NAMES::PROFILE_MASK_ARB, WGL_CONTEXT_CORE_PROFILE_BIT_ARB) };
-  constexpr auto OGL_COMPATIBILITY_CONTEXT  { std::make_pair(WGL_CONTEXT_NAMES::PROFILE_MASK_ARB, WGL_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB) };
+  constexpr auto OGL_CORE_PROFILE_CONTEXT   { std::pair{WGL_CONTEXT_NAMES::PROFILE_MASK_ARB, WGL_CONTEXT_CORE_PROFILE_BIT_ARB} };
+  constexpr auto OGL_COMPATIBILITY_CONTEXT  { std::pair{WGL_CONTEXT_NAMES::PROFILE_MASK_ARB, WGL_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB} };
 
 } // namespace OGL_Info_ns
