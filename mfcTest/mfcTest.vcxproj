@@ -23,7 +23,7 @@
     <ProjectGuid>{9383E2ED-7E0C-484C-9330-1FD6F6581576}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
     <RootNamespace>mfcTest</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
