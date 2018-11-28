@@ -36,26 +36,26 @@ namespace
 {
   // These 4 functions will be run in their own individual thread: one function, one thread; one thread one function
 
-  OGL_Info_ns::driverInfo DrvrInfo() noexcept;
+  [[nodiscard]] OGL_Info_ns::driverInfo DrvrInfo() noexcept;
 
-  OGL_Info_ns::pixelFormats ChoosePixFormats(
+  [[nodiscard]] OGL_Info_ns::pixelFormats ChoosePixFormats(
     OGL_Info_ns::contextAttribs_t const & contextAttribs
     , OGL_Info_ns::pixelAttribs_t const & requiredPixAttribs
     , unsigned int nMaxFormats) noexcept;
 
-  OGL_Info_ns::pixelFormatDetails QueryPixFormat(
+  [[nodiscard]] OGL_Info_ns::pixelFormatDetails QueryPixFormat(
     int pixelFormat
     , int iLayerPlane
     , OGL_Info_ns::contextAttribs_t const & contextAttribs
     , OGL_Info_ns::attribList_t const & attribsRequested
   ) noexcept;
 
-  std::pair<bool, std::string> CheckPixFormat(
+  [[nodiscard]] std::pair<bool, std::string> CheckPixFormat(
     int pixelFormat
   ) noexcept;
 
   // 
-  OGL_Info_ns::WGL_ATTRIBS_VALUE_TYPES GetWGLAttributeValueType(OGL_Info_ns::WGL_ATTRIBS attrib);
+  [[nodiscard]] OGL_Info_ns::WGL_ATTRIBS_VALUE_TYPES GetWGLAttributeValueType(OGL_Info_ns::WGL_ATTRIBS attrib);
 }
 
 // ############################## Interface ###################################

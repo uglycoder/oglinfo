@@ -46,7 +46,7 @@ namespace OGL_Info_ns
 
 
   template <typename FN>
-  typename FN::fn_t GetWGLProc(FN const & wglType) noexcept
+  [[nodiscard]] typename FN::fn_t GetWGLProc(FN const & wglType) noexcept
   {
     using FT = typename FN::fn_t;
     auto const wglFunc{(FT)::wglGetProcAddress(wglType.str)};

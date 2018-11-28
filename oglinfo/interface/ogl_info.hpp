@@ -46,7 +46,7 @@ namespace OGL_Info_ns
   /// On success the latter's 'succeeded' member will be set to true otherwise set to false with
   /// the errorStr member containing an error message.
   /// </returns>
-  OGLINFO_API driverInfo GetDriverInfo() noexcept;
+  OGLINFO_API [[nodiscard]] driverInfo GetDriverInfo() noexcept;
 
   /// <summary>
   /// Contains a vector of pixel formats that match the specified attributes
@@ -102,7 +102,7 @@ namespace OGL_Info_ns
   ///  , 100); // Maximum number of pixel formats to be returned
   /// </code>
   /// </example>
-  OGLINFO_API pixelFormats ChoosePixelFormats(
+  OGLINFO_API [[nodiscard]] pixelFormats ChoosePixelFormats(
     contextAttribs_t const & contextAttribs
     , pixelAttribs_t const & requiredPixAttribs
     , unsigned int nMaxFormats) noexcept;
@@ -157,7 +157,7 @@ namespace OGL_Info_ns
   /// PIXEL_TYPE_ARB = TYPE_RGBA_ARB <BR>
   /// COLOR_BITS_ARB = 32
   /// </example>
-  OGLINFO_API pixelFormatDetails QueryPixelFormat(
+  OGLINFO_API [[nodiscard]] pixelFormatDetails QueryPixelFormat(
     int pixelFormat
     , contextAttribs_t const & contextAttribs
     , attribList_t const & attribsRequested
@@ -175,7 +175,7 @@ namespace OGL_Info_ns
   /// <returns>
   /// Returns true on success, otherwise false.
   /// </returns>
-  OGLINFO_API std::pair<bool, std::string> CheckPixelFormat(
+  OGLINFO_API [[nodiscard]] std::pair<bool, std::string> CheckPixelFormat(
     int pixelFormat
   ) noexcept;
 
@@ -196,5 +196,5 @@ namespace OGL_Info_ns
   /// WGL_ATTRIBS values that are 'integer' return a string representation of it. <BR>
   /// See comments in code for [WGL_ATTRIBS](wgl__defs_8hpp_source.html#1007) 
   /// <remarks/>
-  OGLINFO_API std::pair<std::string, std::string> GetWGL_AttributeStrings(std::pair<WGL_ATTRIBS, int> const & wglAttrib_Value) noexcept;
+  OGLINFO_API [[nodiscard]] std::pair<std::string, std::string> GetWGL_AttributeStrings(std::pair<WGL_ATTRIBS, int> const & wglAttrib_Value) noexcept;
 }
